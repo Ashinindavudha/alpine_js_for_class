@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      [x-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- x-data -->
+    <!-- This directive is used to declare data in a component scope. The data is an object literal with its properties available to the children elements to the element it was declared. -->
+
+    <div x-data="{ name: 'AshinIndavudha', nickname: 'AungMyoKhing', age: 28 }">
+      <!-- children elements  start -->
+      <div>Name: <b x-text="name"></b></div>
+      <div>Nickname: <b x-text="nickname"></b></div>
+      <div>Age: <b x-text="age"></b></div>
+      <!-- children elements  end -->
+    </div>
+    <!-- cannot call outside nickname this is an error -->
+    <div>Nickname: <b x-text="nickname"></b></div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+      [x-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div x-data="init()">
+      <!-- children elements  start -->
+      <div>Name : <span x-text="name"></span></div>
+
+      <button
+        @click="setName('Ashinindavudha')"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Set Name
+      </button>
+      <!-- children elements  end -->
+    </div>
+
+    <script>
+      function init() {
+        return {
+          name: '',
+          setName: function (name) {
+            this.name = name;
+          },
+        };
+      }
+    </script>
+  </body>
+</html>
